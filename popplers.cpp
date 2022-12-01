@@ -64,12 +64,12 @@ int main()
     int indexLow = 0;
     for (int i = 0; i < customers - 1; i++)
     {
-        if (exit[i].getPopplersEaten() < exit[i + 1].getPopplersEaten())
+        if (exit[indexHigh].getPopplersEaten() < exit[i + 1].getPopplersEaten())
             indexHigh = i + 1;
     }
     for (int i = 0; i < customers - 1; i++)
     {
-        if (exit[i].getPopplersEaten() > exit[i + 1].getPopplersEaten())
+        if (exit[indexLow].getPopplersEaten() > exit[i + 1].getPopplersEaten())
             indexLow = i + 1;
     }
     cout << exit[indexHigh].getName() << " ate the most popplers: " << exit[indexHigh].getPopplersEaten() << endl;
